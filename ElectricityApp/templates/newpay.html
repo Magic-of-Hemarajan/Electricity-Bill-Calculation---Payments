@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/newpay.css' %}">
+</head>
+<body>
+    <form action="" name="success-payment" method="post">
+        {% csrf_token %}
+        <div class="details">
+            <p>PAY</p>
+            <div class="cus-payments">
+                <label for="consumer-number">Consumber Number</label>
+                <input type="number" id="consumer-number" name="consumer-number" ><br>
+                <label for="consumer-name">Consumer Name</label>
+                <input type="txt" id="consumer-name" name="consumer-name"><br>
+                <label for="units">Unit</label>
+                <input type="number" id="units" name="units"><br>
+                <label for="prices">Price</label>
+                <input type="number" id="prices" name="priceing" readonly ><br>
+                <input type="button" onclick="c()" value="pay" id="paying">
+                <input type="submit" value="confirm-pay" id="conf-pay">
+
+            </div>
+        </div>
+        <script src="{% static 'css/due-calculation/newpay.js' %}"></script>
+   </form>
+  
+  
+</body>
+</html>

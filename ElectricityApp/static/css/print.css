@@ -1,0 +1,68 @@
+body{
+    border:0;
+    margin: 0;
+    background-color: rosybrown;
+}
+
+
+.rec{
+    display: none;
+    height:800px;
+    width: 700px;
+    background-color: aqua;
+    margin:20px 0px 20px ;
+    font-size: 22px;
+    font-weight: bold;
+    
+    padding:0px 20px;
+}
+
+    
+
+.hads{
+    text-align: center;
+}
+.payment p{
+    margin-left: 400px;
+    position: relative;
+    top:-92px;
+    left:90px;
+}
+
+hidden{
+    visibility:hidden;
+}
+table,td,th{
+    border:2px solid black;
+    height: 150px;
+    width: 600px;
+    font-size:22px ;
+}
+table{
+    position: relative;
+    margin: 100px 0px;
+    border-collapse: collapse;
+    top:-90px;
+    left:50px;
+}
+td{
+    text-align: center;
+}
+
+.download{
+    font-size: 23px;
+    margin: 50px 20px;
+    
+}        
+.download a{
+    text-decoration: none;
+    
+}
+@media print{
+    .rec{
+        display: block;
+    }
+    .download{
+        display: none;
+    }
+}   

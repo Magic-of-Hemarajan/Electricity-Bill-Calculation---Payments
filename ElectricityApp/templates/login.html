@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+   
+</head>
+<body>
+    <div class="forms">
+       <h1 class="text-primary">Login</h1>
+       <form action="" method="post">
+        {% csrf_token %}
+        Username : <input type="text" class="form-control" name="username">
+        Password : <input type="password" class="form-control" name="password">
+        <button class="btn btn-primary">submit</button>
+        <a href="{% url 'index' %}">You have no Account</a>
+       </form>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* // home.html css code // */
+nav li{
+    display: inline-block;
+    margin:0px 15px;
+    font-size: 25px;
+    color:white;
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    background-color: rgb(44, 19, 10);
+}
+.head{
+    text-align: center;
+    display: flex;
+    font-size: 50px;
+    margin: 10px 0;
+    font-weight: bolder;
+    color: rgb(28, 206, 215);
+}
+nav ul{
+    margin: 20px 80px;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:beige;
+}
+a:hover{
+    color:cadetblue;
+}
+
+
+/* this postion is calculation due amout */
+
+.dueamount{
+    margin:45px 450px;
+    background-color: cadetblue;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    
+}
+label{
+    font-size: 30px;
+    display: block;
+    padding:15px 0;
+    font-weight: bolder;
+
+}
+.dueamount input[type=number] {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 40px;
+    border-radius: 20px;
+    padding:10px
+}
+.dueamount h1{
+    text-align: center;
+}
+.dueamount input[type=button]{
+    width: 40%;
+    color: red;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px 100px;
+    border-radius: 20px;
+}
+#acm{
+    font-size: 40px;
+    font-weight: bolder;
+    border:2px solid black;
+    padding:15px;
+    text-align: center;
+}
+/* receipt html  */
+.rec{
+    height:800px;
+    width: 700px;
+    background-color: aqua;
+    margin:20px 0px 20px ;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    padding:0px 20px;
+}
+
+    .bills{
+        display: ;
+    }
+
+.hads{
+    text-align: center;
+}
+.payment p{
+    margin-left: 400px;
+    position: relative;
+    top:-92px;
+    left:90px;
+}
+
+hidden{
+    visibility:hidden;
+}
+table,td,th{
+    border:2px solid black;
+    height: 150px;
+    width: 600px;
+    font-size:22px ;
+}
+table{
+    position: relative;
+    margin: 100px 0px;
+    border-collapse: collapse;
+    top:-90px;
+    left:50px;
+}
+td{
+    text-align: center;
+}
+
+/* printing design  */
+.dueamount input[type=submit]{
+    width: 40%;
+    color: red;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px 100px;
+    border-radius: 20px;
+}

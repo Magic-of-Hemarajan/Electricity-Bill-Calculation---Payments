@@ -1,0 +1,39 @@
+{% load  static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric</title>
+    <link rel="stylesheet" href=" {% static 'home.css' %}">
+</head>
+<body>
+    <nav>
+
+       <div class="nav">
+        <!-- <p>TNEP</p><br> -->
+        <p><li><img src="/static/poin.jpeg" alt="profile" style="height: 40px; width: 50px; border-radius: 50%;"></li></p>
+       </div>
+       <div class="head">TNEB</div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="{% url 'Due_calculation' %}">Due-Calculation</a></li>
+                <li><a href="{% url 'payments' %}">Pay</a></li>
+                <li><a href="{% url 'generate' %}">Download-Receipt</a></li>
+                <li><a href="{% url 'logout' %}">logout</a></li>
+                <!-- <li><img src="poin.jpeg" alt="profile" style="height: 40px; width: 50px; border-radius: 50%;"></a></li> -->
+            </ul>
+
+    </nav>
+
+      <h1 style="text-align: center;">Welcome {{user.username}} </h1>
+      <h1>{{now}} </h1>
+    
+      
+   
+    
+      
+    
+</div>
+</body>
+</html>

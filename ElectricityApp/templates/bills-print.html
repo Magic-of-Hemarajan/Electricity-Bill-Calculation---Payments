@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/print.css' %}">
+</head>
+<body>
+
+<div class="rec">
+   <div class="hads">
+    <p>Tamil Nadu Generation and Distribution Corporation (TANGEDCO)</p>
+    <p>Electricity Bill Receipt</p>
+   </div>
+   <div class="base">
+    <p id="consumer-name">Consumer Num. : {{bills.number}}</p>
+    <div id="consumer-number">Consumer Name : {{bills.name}} </div>
+    <p id="receipt-number">Receipt Number : {{bills.receipt}} </p>
+    <div class="payment">
+        <p id="payment-date">Type : {{type}} </p>
+        <p id="date">Date : {{bills.date}} </p>
+    </div>
+   </div>
+   <div class="table" >
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Unit</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="e-unit"style="color:red;">{{bills.unit}} </td>
+            <td id="e-price" style="color:red;">{{bills.price}}/-</td>
+        </tr>
+    </table>    
+   </div>
+
+</div>
+<div class="download">
+  <p>please <a href="#" onclick="window.print()"> Download </a>your Receipt</p>
+</div>
+
+<h1 class="text-primary"><a href="{% url 'home' %}">Back</a></h1>
+</body>
+</html>
