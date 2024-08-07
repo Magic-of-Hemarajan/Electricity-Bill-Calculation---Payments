@@ -36,13 +36,14 @@ def Login_view(request):
             return HttpResponse("Invalid username or password")
     return render(request,'login.html')
 
-@login_required   
+@login_required(login_url='/login/')
 def home(request):
     return render(request, 'home.html')
 
 def Due_calculation(request):
     return render(request, 'calculation.html')
 
+@login_required(login_url='/login/')
 def payments_view(request):
     users = request.user
     if request.method == 'POST':
