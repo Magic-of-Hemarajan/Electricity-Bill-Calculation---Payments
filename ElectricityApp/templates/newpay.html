@@ -14,13 +14,13 @@
             <p>PAY</p>
             <div class="cus-payments">
                 <label for="consumer-number">Consumber Number</label>
-                <input type="number" id="consumer-number" name="consumer-number" ><br>
+                <input type="number" id="consumer-number" name="consumer-number" title="consumer name is required" required ><br>
                 <label for="consumer-name">Consumer Name</label>
-                <input type="txt" id="consumer-name" name="consumer-name"><br>
+                <input type="txt" id="consumer-name" name="consumer-name" title="consumer number is required required><br>
                 <label for="units">Unit</label>
-                <input type="number" id="units" name="units"><br>
+                <input type="number" id="units"  name="units" title="how many units consumed" required><br>
                 <label for="prices">Price</label>
-                <input type="number" id="prices" name="priceing" readonly ><br>
+                <input type="number" id="prices" name="priceing" value="0" readonly ><br>
                 <input type="button" onclick="c()" value="pay" id="paying">
                 <input type="submit" value="confirm-pay" id="conf-pay">
 

@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amount Calculation</title>
-    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homes.css' %}">
 </head>
+<style>
+
+</style>
 <body  style="background-color: rgb(5, 77, 61);">
     <form action=""name="bill">
         <div class="dueamount">
@@ -15,11 +18,11 @@
                 <input type="number" id="units" value="units"><br>
                 <input type="button" value="submit" onclick="abc()">
               <h2>Your Electricity Amount is:</h2>
-              <p id="acm">--</p>
-
+              <p id="acm">0</p>
+              <h2 class="goback"><a href="{% url 'home' %}">>>>back</a> </h2>
         </div>
     </form>
-    <h1><a href="{% url 'home' %}">click</a> </h1>
+    
     
     <script src="{% static 'css/due-calculation/calculation.js' %}"></script>
 </body> 

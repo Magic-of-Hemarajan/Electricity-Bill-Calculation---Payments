@@ -5,8 +5,8 @@ function abc(){
    if(unit<=100){
     document.getElementById("acm").innerHTML=(unit*0);
     }
-    else if(unit<=200){
-        document.getElementById("acm").innerHTML=Math.round((100*0)+(unit-100)*2.25);
+    else if(unit<=200){aa
+        document.getElementById("acm").innerHTML=Math.round((100*0)+(unit-100)*2.250);
       
     }
     else if(unit<=400){

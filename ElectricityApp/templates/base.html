@@ -1,29 +1,43 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
    
 </head>
-
+<style>
+    [input:submit]{
+    margin: 20px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    }
+</style>
 <body>
     <div class="forms">
-       <h1 class="text-primary">Singup</h1>
+       <h1>Singup</h1>
        <form action="" method="post">
         {% csrf_token %}
-        Username : <input type="text" class="form-control" name="username" required>
-        Email : <input type="email" class="form-control" name="email" required>
-        Password : <input type="password" class="form-control" name="password" required>
-        <button type="button"  class="btn btn-primary">submit</button>
+        <label for="username">Username : </label>
+        <input type="text" name="username" required>
+        {% for message in messages  %}
+        <p style="color: red;">{{ message }}</p>
+          
+        {% endfor %}
+        <label for="email">Email : </label>
+        <input type="email" name="email" required>
+        <label for="password">Password : </label>
+        <input type="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character" required>
+
+        <button type="submit" value="submit">submit</button>
         <a href="{% url 'login' %}">You have account</a>
        </form>
     </form>
     </div>
 </body>
 </html>
+
+

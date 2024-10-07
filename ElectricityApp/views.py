@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login , logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from ElectricityApp.models import payments
+from django.contrib import messages
 import datetime
 import random
 
@@ -11,12 +12,14 @@ import random
 
 def index_view(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
 
         if User.objects.filter(username=username).exists():
-            return HttpResponse("username is already exits")
+            # return HttpResponse("username is already exits")
+            messages.error(request,"**Username already exits")
+            return redirect('/')
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
         return redirect('login')
@@ -24,8 +27,8 @@ def index_view(request):
 
 def Login_view(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
 
@@ -68,7 +71,7 @@ def generate(request):
         try:
             bills = payments.objects.get(receipt=bill)
         except payments.DoesNotExist:
-            return HttpResponse('receipt number not found')
+            return HttpResponse('<script>alert("receipt number not found");window.location.href=""</script>')
         type = "online"
         context={
             'bills':bills,
